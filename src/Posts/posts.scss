@@ -1,0 +1,107 @@
+$borderColor: #cecece;
+$accent: tomato;
+$down: #0153ab;
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  h1 {
+    text-align: center;
+    color: $accent;
+  }
+}
+
+.posts-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -5px;
+}
+
+.post-item {
+  flex: 1 1 300px;
+  padding: 10px;
+  display: flex;
+  border: 1px solid $borderColor;
+  flex-direction: column;
+  margin: 5px;
+  border-radius: 5px;
+
+  h2 {
+    text-align: center;
+    text-transform: capitalize;
+    flex: 1 1 auto;
+  }
+
+  .post-content {
+    align-items: flex-start;
+    border-bottom: 1px solid $borderColor;
+    padding-bottom: 5px;
+
+    &:first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  .post-counter {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    user-select: none;
+  }
+  .like-sum {
+    display: flex;
+    align-items: center;
+    color: $accent;
+    font-size: 25px;
+    .like-sum-icon {
+      width: 25px;
+      height: 25px;
+      margin-right: 5px;
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.btn-container {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  .btn-up,
+  .btn-down {
+    display: flex;
+    border: none;
+    margin-right: 5px;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: transparent;
+    svg {
+      width: 100%;
+      height: 100%;
+      transition: color .3s;
+    }
+  }
+  .btn-up {
+    &:hover {
+      svg {
+        color: $accent;
+      }
+    }
+  }
+  .btn-down {
+    &:hover {
+      svg {
+        color: $down;
+      }
+    }
+  }
+  span {
+    display: block;
+    font-size: 25px;
+  }
+}
