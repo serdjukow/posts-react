@@ -8,13 +8,9 @@ export default ({post, increment, decrement}) => {
 
         <div className='post-counter'>
             <div className='btn-container'>
-                <button className='btn-up'
-                        onClick={() => increment(post.id)}>
+                <button className='btn-up' onClick={() => increment(post.id)}>
                     {imgUp}
                 </button>
-                <span className='currentUp'>
-                    {post.countUp}
-                </span>
             </div>
             <div className='like-sum'>
                 <span className='like-sum-icon'>
@@ -25,13 +21,9 @@ export default ({post, increment, decrement}) => {
                 </span>
             </div>
             <div className='btn-container'>
-                <button className='btn-down'
-                        onClick={() => decrement(post.id)}>
+                <button className='btn-down' onClick={() => decrement(post.id)}>
                     {imgDown}
                 </button>
-                <span className='currentDown'>
-                    {post.countDown}
-                </span>
             </div>
         </div>
     </article>
