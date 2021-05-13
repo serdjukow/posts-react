@@ -6,7 +6,6 @@ $down: #0153ab;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-
   h1 {
     text-align: center;
     color: $accent;
@@ -30,15 +29,16 @@ $down: #0153ab;
 
   h2 {
     text-align: center;
-    text-transform: capitalize;
     flex: 1 1 auto;
+    &:first-letter {
+      text-transform: uppercase;
+    }
   }
 
   .post-content {
     align-items: flex-start;
     border-bottom: 1px solid $borderColor;
     padding-bottom: 5px;
-
     &:first-letter {
       text-transform: uppercase;
     }
