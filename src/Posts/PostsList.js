@@ -1,17 +1,18 @@
 import React from "react";
-import './posts.scss'
-import PostItem from './PostItem'
+import PostItem from './PostCounter'
 
-export default ({posts, increment, decrement}) => {
+export default ({posts}) => {
     return (
         <div className='posts-list'>
             {posts.map(post => (
-                <PostItem
-                    post={post}
-                    key={post.id}
-                    increment={increment}
-                    decrement={decrement}
-                />
+                <article className='post-item' key={post.id}>
+                    <h2>{post.title}</h2>
+                    <div className='post-content'>{post.body}</div>
+                    <PostItem
+                        post={post}
+                        key={post.id}
+                    />
+                </article>
             ))}
         </div>
     )
